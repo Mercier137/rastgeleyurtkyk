@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sana Yurt Çıkacak mı?</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      text-align: center;
+      margin-top: 100px;
+    }
+    h1 {
+      color: #333;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    p {
+      margin-top: 30px;
+      font-size: 22px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Sana Yurt Çıkacak mı?</h1>
+  <button onclick="yurtDurumu()">Öğren</button>
+  <p id="sonuc"></p>
+
+  <script>
+    function yurtDurumu() {
+      let rastgele = Math.random(); // 0 ile 1 arasında sayı üretir
+      let sonuc = "";
+
+      if (rastgele < 0.6) {
+        sonuc = "✅ Evet, yurt çıkacak!";
+      } else {
+        sonuc = "❌ Hayır, çıkmayacak.";
+      }
+
+      document.getElementById("sonuc").innerText = sonuc;
+    }
+  </script>
+</body>
+</html>
